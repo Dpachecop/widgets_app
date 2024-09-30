@@ -52,6 +52,7 @@ class _ButtonsBody extends StatelessWidget {
               label: const Text('Elevated icon disabled'),
               icon: const Icon(Icons.hot_tub_outlined),
             ),
+            const CustomButton(),
             FilledButton.icon(
               onPressed: () {},
               label: const Text('filled icon'),
@@ -68,6 +69,28 @@ class _ButtonsBody extends StatelessWidget {
               icon: const Icon(Icons.drafts),
             )
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class CustomButton extends StatelessWidget {
+  const CustomButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Material(
+        color: colors.primary,
+        child: InkWell(
+          onTap: () {},
+          child: const Padding(
+            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+            child: Text('Boton personalizado'),
+          ),
         ),
       ),
     );
