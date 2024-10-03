@@ -89,7 +89,10 @@ class CustomButton extends StatelessWidget {
           onTap: () {},
           child: const Padding(
             padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-            child: Text('Boton personalizado'),
+            child: Text(
+              'Boton personalizado',
+              style: TextStyle(color: Colors.white),
+            ),
           ),
         ),
       ),
