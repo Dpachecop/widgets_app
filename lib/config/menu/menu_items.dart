@@ -23,5 +23,10 @@ const List<MenuItems> menuItemsList = [
       title: 'Cards ',
       subtittle: 'card widgets',
       url: '/cards',
-      icon: Icons.card_membership_outlined)
+      icon: Icons.card_membership_outlined),
+  MenuItems(
+      title: 'ProgressIndicator ',
+      subtittle: 'inidica el progreso',
+      url: '/progress',
+      icon: Icons.refresh_outlined),
 ];
