@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:widgets_app/presentation/screens/animated/animated_screen.dart';
 
 import 'package:widgets_app/presentation/screens/progress/progress_screen.dart';
 import 'package:widgets_app/presentation/screens/screen/screens.dart';
@@ -40,6 +41,12 @@ final GoRouter appRouter = GoRouter(
       name: Snackbarscreen.name,
       builder: (BuildContext context, GoRouterState state) =>
           const Snackbarscreen(),
+    ),
+    GoRoute(
+      path: '/animated',
+      name: AnimatedScreen.name,
+      builder: (BuildContext context, GoRouterState state) =>
+          const AnimatedScreen(),
     ),
   ],
 );

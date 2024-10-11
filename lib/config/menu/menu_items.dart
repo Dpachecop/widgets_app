@@ -34,4 +34,10 @@ const List<MenuItems> menuItemsList = [
       subtittle: 'Snackbars y mas',
       url: '/snackbar',
       icon: Icons.info),
+  MenuItems(
+    title: 'Animated ',
+    subtittle: 'Funny animations',
+    url: '/animated',
+    icon: Icons.all_inclusive_rounded,
+  ),
 ];
