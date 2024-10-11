@@ -12,6 +12,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      title: 'Flutter Licenses',
       routerConfig: appRouter,
       theme: ThemeApp(5).getTheme(),
       debugShowCheckedModeBanner: false,

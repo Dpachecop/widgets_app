@@ -29,4 +29,9 @@ const List<MenuItems> menuItemsList = [
       subtittle: 'inidica el progreso',
       url: '/progress',
       icon: Icons.refresh_outlined),
+  MenuItems(
+      title: 'Snackbars ',
+      subtittle: 'Snackbars y mas',
+      url: '/snackbar',
+      icon: Icons.info),
 ];
