@@ -38,18 +38,24 @@ const List<MenuItems> menuItemsList = [
     title: 'Animated ',
     subtittle: 'Funny animations',
     url: '/animated',
-    icon: Icons.all_inclusive_rounded,
+    icon: Icons.animation,
   ),
   MenuItems(
-    title: '  UI controls ',
+    title: 'UI controls ',
     subtittle: 'Controls and tiles',
     url: '/ui-controls',
     icon: Icons.control_camera_outlined,
   ),
   MenuItems(
-    title: '  Tutorial App ',
+    title: 'Tutorial App ',
     subtittle: 'Tutorial de la aplicacion',
     url: '/tutorial',
     icon: Icons.layers_rounded,
+  ),
+  MenuItems(
+    title: 'Infinite Scroll ',
+    subtittle: 'Scroll infinito',
+    url: '/infinite',
+    icon: Icons.all_inclusive_rounded,
   ),
 ];

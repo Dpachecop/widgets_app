@@ -41,7 +41,6 @@ class _AppTutorialState extends State<AppTutorial> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     pageviweController.addListener(() {
       final page = pageviweController.page ?? 0;

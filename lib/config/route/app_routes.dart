@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:widgets_app/presentation/screens/animated/animated_screen.dart';
 import 'package:widgets_app/presentation/screens/app_tutorial/app_tutorial.dart';
+import 'package:widgets_app/presentation/screens/infinitescroll/inifnit_scroll.dart';
 
 import 'package:widgets_app/presentation/screens/progress/progress_screen.dart';
 import 'package:widgets_app/presentation/screens/screen/screens.dart';
@@ -61,6 +62,12 @@ final GoRouter appRouter = GoRouter(
       name: AppTutorial.name,
       builder: (BuildContext context, GoRouterState state) =>
           const AppTutorial(),
+    ),
+    GoRoute(
+      path: '/infinite',
+      name: InfiniteScrollScreen.name,
+      builder: (BuildContext context, GoRouterState state) =>
+          const InfiniteScrollScreen(),
     ),
   ],
 );
