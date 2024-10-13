@@ -40,4 +40,10 @@ const List<MenuItems> menuItemsList = [
     url: '/animated',
     icon: Icons.all_inclusive_rounded,
   ),
+  MenuItems(
+    title: '  UI controls ',
+    subtittle: 'Controls and tiles',
+    url: '/ui-controls',
+    icon: Icons.control_camera_outlined,
+  ),
 ];
