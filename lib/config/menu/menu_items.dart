@@ -46,4 +46,10 @@ const List<MenuItems> menuItemsList = [
     url: '/ui-controls',
     icon: Icons.control_camera_outlined,
   ),
+  MenuItems(
+    title: '  Tutorial App ',
+    subtittle: 'Tutorial de la aplicacion',
+    url: '/tutorial',
+    icon: Icons.layers_rounded,
+  ),
 ];
