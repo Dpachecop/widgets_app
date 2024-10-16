@@ -3,7 +3,6 @@ import 'package:go_router/go_router.dart';
 import 'package:widgets_app/presentation/screens/animated/animated_screen.dart';
 import 'package:widgets_app/presentation/screens/app_tutorial/app_tutorial.dart';
 import 'package:widgets_app/presentation/screens/infinitescroll/inifnit_scroll.dart';
-
 import 'package:widgets_app/presentation/screens/progress/progress_screen.dart';
 import 'package:widgets_app/presentation/screens/screen/screens.dart';
 import 'package:widgets_app/presentation/screens/Snackbars/snackbar_screen.dart';

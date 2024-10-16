@@ -1,9 +1,6 @@
-import 'dart:math';
-
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:widgets_app/config/route/app_routes.dart';
 
 class InfiniteScrollScreen extends StatefulWidget {
   static const name = 'Infinite_scroll_screen';
@@ -15,9 +12,13 @@ class InfiniteScrollScreen extends StatefulWidget {
 
 class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
   List img = [1, 2, 3, 4, 5];
+
   final ScrollController scrollController = ScrollController();
+
   bool isLoading = false;
+
   bool isMounted = true;
+
   void addImages() {
     final lastId = img.last;
 
@@ -26,7 +27,6 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     scrollController.addListener(
