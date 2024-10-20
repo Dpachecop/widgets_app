@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:widgets_app/presentation/screens/animated/animated_screen.dart';
 import 'package:widgets_app/presentation/screens/app_tutorial/app_tutorial.dart';
+import 'package:widgets_app/presentation/screens/counter/counter_screen.dart';
 import 'package:widgets_app/presentation/screens/infinitescroll/inifnit_scroll.dart';
 import 'package:widgets_app/presentation/screens/progress/progress_screen.dart';
 import 'package:widgets_app/presentation/screens/screen/screens.dart';
 import 'package:widgets_app/presentation/screens/Snackbars/snackbar_screen.dart';
+import 'package:widgets_app/presentation/screens/theme_screen/control_theme_screen.dart';
 import 'package:widgets_app/presentation/screens/ui_controls/ui_controls.dart';
 
 /// The route configuration.
@@ -67,6 +69,18 @@ final GoRouter appRouter = GoRouter(
       name: InfiniteScrollScreen.name,
       builder: (BuildContext context, GoRouterState state) =>
           const InfiniteScrollScreen(),
+    ),
+    GoRoute(
+      path: '/counter',
+      name: CounterScreen.name,
+      builder: (BuildContext context, GoRouterState state) =>
+          const CounterScreen(),
+    ),
+    GoRoute(
+      path: '/theme',
+      name: ControlThemeScreen.name,
+      builder: (BuildContext context, GoRouterState state) =>
+          const ControlThemeScreen(),
     ),
   ],
 );

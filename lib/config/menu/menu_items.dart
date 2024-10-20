@@ -58,4 +58,16 @@ const List<MenuItems> menuItemsList = [
     url: '/infinite',
     icon: Icons.all_inclusive_rounded,
   ),
+  MenuItems(
+    title: 'Counter Screen ',
+    subtittle: 'contador',
+    url: '/counter',
+    icon: Icons.add_box_sharp,
+  ),
+  MenuItems(
+    title: 'Control Theme',
+    subtittle: 'Elige tu tema favorito',
+    url: '/theme',
+    icon: Icons.color_lens_outlined,
+  ),
 ];
