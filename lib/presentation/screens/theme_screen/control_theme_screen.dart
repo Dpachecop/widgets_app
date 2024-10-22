@@ -16,7 +16,11 @@ class ControlThemeScreen extends ConsumerWidget {
         title: const Text('Elige tu tema favorito'),
         actions: [
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                ref.read(darkModeprovider.notifier).update(
+                      (state) => !darkMode,
+                    );
+              },
               icon: FadeInRight(
                   animate: true,
                   curve: Curves.easeInBack,
@@ -38,6 +42,7 @@ class ControlThemeBody extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     final List colors = ref.watch(colorListProvider);
+    final int indexColor = ref.watch(indexColorProvider);
     return ListView.builder(
       itemCount: colors.length,
       itemBuilder: (BuildContext context, int index) {
@@ -50,8 +55,10 @@ class ControlThemeBody extends ConsumerWidget {
           ),
           subtitle: Text('${color.value}'),
           value: index,
-          groupValue: 3,
-          onChanged: (value) {},
+          groupValue: indexColor,
+          onChanged: (value) {
+            ref.read(indexColorProvider.notifier).state = index;
+          },
         );
       },
     );
