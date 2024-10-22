@@ -14,7 +14,7 @@ class ThemeApp {
   int selectedColor = 0;
   bool isDarkMode = false;
 
-  ThemeApp(this.selectedColor, this.isDarkMode)
+  ThemeApp({this.selectedColor = 0, this.isDarkMode = false})
       : assert(selectedColor >= 0, 'Selected color must be > 0'),
         assert(selectedColor < colorList.length,
             'Selectedcolor must be < ${colorList.length - 1}');
@@ -24,4 +24,9 @@ class ThemeApp {
       brightness: isDarkMode ? Brightness.dark : Brightness.light,
       colorSchemeSeed: colorList[selectedColor],
       appBarTheme: const AppBarTheme(centerTitle: true));
+
+  ThemeApp copyWith({bool? isDarkMode, int? selectedColor}) => ThemeApp(
+        isDarkMode: isDarkMode ?? this.isDarkMode,
+        selectedColor: selectedColor ?? this.selectedColor,
+      );
 }

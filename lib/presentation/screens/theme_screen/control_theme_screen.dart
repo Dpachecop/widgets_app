@@ -1,7 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:widgets_app/presentation/provider/dark_theme_provider.dart';
+import 'package:widgets_app/presentation/provider/theme_provider.dart';
 
 class ControlThemeScreen extends ConsumerWidget {
   static const name = "Control_theme_screen";
@@ -9,7 +9,7 @@ class ControlThemeScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, ref) {
-    final bool darkMode = ref.watch(darkModeprovider);
+    final bool darkMode = ref.watch(themeNotifierProvider).isDarkMode;
 
     return Scaffold(
       appBar: AppBar(
@@ -17,9 +17,7 @@ class ControlThemeScreen extends ConsumerWidget {
         actions: [
           IconButton(
               onPressed: () {
-                ref.read(darkModeprovider.notifier).update(
-                      (state) => !darkMode,
-                    );
+                ref.read(themeNotifierProvider.notifier).toogleDarkMode();
               },
               icon: FadeInRight(
                   animate: true,
@@ -42,7 +40,7 @@ class ControlThemeBody extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     final List colors = ref.watch(colorListProvider);
-    final int indexColor = ref.watch(indexColorProvider);
+    final int indexColor = ref.watch(themeNotifierProvider).selectedColor;
     return ListView.builder(
       itemCount: colors.length,
       itemBuilder: (BuildContext context, int index) {
@@ -57,7 +55,7 @@ class ControlThemeBody extends ConsumerWidget {
           value: index,
           groupValue: indexColor,
           onChanged: (value) {
-            ref.read(indexColorProvider.notifier).state = index;
+            ref.read(themeNotifierProvider.notifier).changeColorIndex(index);
           },
         );
       },
